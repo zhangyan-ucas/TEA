@@ -13,10 +13,10 @@
 
 
 # News
-***2025/12/12***
+***2024/12/12***
 - Update the training codes and M4-ViteVQA datasets features!
 
-***2025/12/10***
+***2024/12/10***
 - The paper is accepted to 2025 AAAI! 
 
 
