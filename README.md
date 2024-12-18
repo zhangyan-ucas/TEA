@@ -1,7 +1,7 @@
 
 <h1 align="center"> TEA: Extending TextVQA from Image to Video with Spatio-Temporal Clues</h1>
 <p align="center">
-<h4 align="center">This is the official repository of the paper <a href="https://aaai.org/conference/aaai/aaai-25/">TEA</a>.</h4>
+<h4 align="center">This is the official repository of the paper <a href="https://arxiv.org/abs/2412.12502">TEA</a>.</h4>
 <h5 align="center"><em><a href="https://scholar.google.com/citations?hl=zh-CN&user=IUNcUO0AAAAJ">Yan Zhang</a>, Gangyan Zeng, Huawen Shen, Daiqing Wu, Yu Zhou, Can Ma </em></h5>
 <p align="center">
   <a href="#introduction">Introduction</a> |
