@@ -3,16 +3,10 @@
 <p align="center">
 <h4 align="center">This is the official repository of the paper <a href="https://arxiv.org/abs/2412.12502">TEA</a>.</h4>
 <h5 align="center"><em><a href="https://scholar.google.com/citations?hl=zh-CN&user=IUNcUO0AAAAJ">Yan Zhang</a>, Gangyan Zeng, Huawen Shen, Daiqing Wu, Yu Zhou, Can Ma </em></h5>
-<p align="center">
-  <a href="# news">News</a> |
-  <a href="# Installation">Installation</a> |
-  <a href="# Datasets prepare">Datasets prepare</a> |
-  <a href="# Training">Training</a> |
-  <a href="# Statement">Statement</a>
-</p>
 
 
-## News
+
+# News
 ***2024/12/19***
 - We are the first open-source TextVQA project utilizing HuggingFace framework (extendable to any SOTA work)!
 - Update the training codes, training ckpt and M4-ViteVQA datasets features!
@@ -21,7 +15,7 @@
 - The paper is accepted to 2025 AAAI! 
 
 
-## Installation
+# Installation
 Python_3.8 + PyTorch_2.1.0 + CUDA_12.1 + transformers_4.42.3
 
 ```python
@@ -32,7 +26,7 @@ pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https
 pip install -r requirements.txt
 ```
 
-## Datasets prepare
+# Datasets prepare
 
 Following features are provided for [M4-ViteVQA](https://github.com/bytedance/VTVQA) dataset, you can download from [here](https://huggingface.co/datasets/yan1223/tea-m4vitevqa/tree/main) (huggingface dataset link):
 - Raw video frames
@@ -63,26 +57,30 @@ Following features are provided for [M4-ViteVQA](https://github.com/bytedance/VT
     |            |--- 02502 (video_name)
     |            |--- 02915 (video_name)
     |            |--- ...
-    
+    |      |--- objects_vocab.txt (includes object name directory)
 ```
+ 
 
-### 
 
 ## Ckpt Download
-You can utilize [t5-instruct-qformer-vision](https://huggingface.co/yan1223/TEA_init/tree/main) to init model and train model.
+You can utilize [t5-instruct-qformer-vision](https://huggingface.co/yan1223/TEA_init/tree/main) to init model and train.
+
+You can utilize [tea-base](https://huggingface.co/yan1223/tea-base/tree/main) to evaluate.
 
 
 
-## Training
-### M4-ViteVQA
-
+# M4-ViteVQA
+### Training
 ```
-sh ./scripts/vitevqa.sh
+sh ./scripts/vitevqa_train.sh
+```
+### Evaluate
+```
+sh ./scripts/vitevqa_test.sh
 ```
 
 
-
-## Statement
+# Statement
 
 This project is for research purpose only. For any other questions please contact [zhangyan2022@iie.ac.cn](mailto:zhangyan2022@iie.ac.cn).
 
