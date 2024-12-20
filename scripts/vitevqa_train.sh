@@ -1,0 +1,37 @@
+python train.py \
+--output_dir "./results/tea-base" \
+--overwrite_output_dir True \
+--save_strategy "steps" \
+--save_steps 1000 \
+--save_total_limit 1 \
+--metric_for_best_model "stvqa_acc" \
+--load_best_model_at_end True \
+--do_predict True \
+--max_steps 30000 \
+--evaluation_strategy "steps" \
+--eval_steps 1000 \
+--warmup_steps 1000 \
+--per_device_train_batch_size 4 \
+--gradient_accumulation_steps 2 \
+--learning_rate 5e-5 \
+--per_device_eval_batch_size 1 \
+--dataset_name "m4-vitevqa" \
+--lr_scheduler_type "linear" \
+--weight_decay 0.01 \
+--ocr_len 250 \
+--obj_len 60 \
+--num_frames 10 \
+--remove_unused_columns False \
+--use_frame_type True \
+--use_bbox True \
+--use_obj True \
+--dataloader_num_workers 10 \
+--use_aggregation_module True \
+--qformer_module_model_name "instructblip-vicuna-7b" \
+--bbox_module_model_name "bros-base-uncased" \
+--am_adapter_kernel_size_t 3 \
+--am_adapter_kernel_size_l 3 \
+--am_ocr_multi_gran True \
+--model_name_or_path "/data/zhangyan/data/pretrained_model/videot5-mod/t5-instruct-qformer-vision" \
+
+
